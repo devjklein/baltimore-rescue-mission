@@ -22,7 +22,7 @@ social:
 description: >- # this means to ignore newlines until "baseurl:"
   The Baltimore Rescue Mission has been reaching out to the poor of Baltimore 
   since 1956. We are a Christian, non-profit, non-denominational Gospel ministry.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/baltimore-rescue-mission"
 url: "baltimorerescuemission.org"
 lang: en_US
 
