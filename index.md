@@ -3,7 +3,7 @@ title: Homepage
 layout: default
 ---
 
-<img style="max-height: 300px; margin-top: 25px" src="{{ "/img/logo/brm-logo-color.svg" | relative_url }}" alt="Klein Visual Logo Large">
+<img style="max-height: 300px; margin-top: 25px" src="{{ "/img/logo/brm-logo-color.svg" | relative_url }}" alt="Baltimore Rescue Mission Logo">
 
 # Baltimore Rescue Mission
 
