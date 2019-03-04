@@ -2,20 +2,39 @@
 title: Homepage
 layout: default
 ---
-
-<img style="max-height: 300px; margin-top: 25px" src="{{ "/img/logo/brm-logo-color.svg" | relative_url }}" alt="Baltimore Rescue Mission Logo">
-
-# Baltimore Rescue Mission
-
-The Baltimore Rescue Mission has been reaching out to the poor of Baltimore since 1956. We are a Christian, non-profit, non-denominational Gospel ministry.
-
-Our website is currently under construction and will be available in March 2019.
-
-To donate now, please click below.
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-  <input type="hidden" name="cmd" value="_s-xclick" />
-  <input type="hidden" name="hosted_button_id" value="VH2TZCZFWRQYE" />
-  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-  <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-</form>
+<main class="">
+  <section class="row  white">
+    <div class="col-12  center">
+      <img style="max-height: 400px; padding: 25px 0" src="{{ "/img/logo/brm-logo-color.svg" | relative_url }}" alt="Baltimore Rescue Mission Logo">
+      <div class="note">
+        <p>The Baltimore Rescue Mission has been reaching out to the poor of Baltimore since 1956. We are a Christian, non-profit, non-denominational Gospel ministry.</p>
+      </div>
+    </div>
+    <div class="col-12  grape  text-white  center">
+      <p>Our website is currently under construction and will be available in April 2019.</p><br>
+    </div>
+    <div class="col-12  center">
+      <a class="btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VH2TZCZFWRQYE&source=url" target="_blank">Donate</a>
+    </div>
+    <div class="col-12  center">
+      <div class="note  note__no-margin">
+        <p>Your generous gift to this ministry will enable us to provide for the spiritual, physical, and material needs of our guests, and is greatly appreciated.</p>
+      </div>
+    </div>
+    <div class="col-4  center">
+      <p><strong>Men’s Division Location</strong><br>4 N Central Ave.<br>Baltimore, Maryland 21202-4622<br><a href="tel:4103422533">(410) 342-2533</a></p>
+    </div>
+    <div class="col-4  center">
+      <p><strong>Mailing Address</strong><br>PO Box 735<br>Baltimore, Maryland 21203-0735</p>
+    </div>
+    <div class="col-4  center">
+      <p><strong>Karis Home (Women & Children)</strong><br>1228 E Baltimore St.<br>Baltimore, Maryland 21202-4622<br><a href="4103421323">(410) 342-1323</a></p>
+    </div>
+    <div class="col-12  center">
+      <p><a href="mailto:baltimorerescuemission@gmail.com">baltimorerescuemission@gmail.com</a></p>
+    </div>
+    <div class="col-12  grape  text-white  center">
+      <p>© Copyright 2019 Baltimore Rescue Mission, Inc. All rights reserved.</p><br>
+    </div>
+  </section>
+</main>
