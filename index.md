@@ -5,7 +5,7 @@ layout: default
 <main class="">
   <section class="row  white">
     <div class="col-12  center">
-      <img style="max-height: 400px; padding: 25px 0" src="{{ "/img/logo/brm-logo-color.svg" | relative_url }}" alt="Baltimore Rescue Mission Logo">
+      <img style="height: 100%; max-height: 400px; padding: 25px 0" src="{{ "/img/logo/brm-logo-color.svg" | relative_url }}" alt="Baltimore Rescue Mission Logo">
       <div class="note">
         <p>The Baltimore Rescue Mission has been reaching out to the poor of Baltimore since 1956. We are a Christian, non-profit, non-denominational Gospel ministry.</p>
       </div>
