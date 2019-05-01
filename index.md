@@ -11,7 +11,7 @@ layout: default
       </div>
     </div>
     <div class="col-12  grape  text-white  center">
-      <p>Our website is currently under construction and will be available in April 2019.</p><br>
+      <p>Our website is currently under construction and will be available in May 2019.</p><br>
     </div>
     <div class="col-12  center">
       <a class="btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VH2TZCZFWRQYE&source=url" target="_blank">Donate</a>
