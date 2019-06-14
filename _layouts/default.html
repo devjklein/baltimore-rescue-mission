@@ -13,8 +13,7 @@
   
   
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet"> 
-  
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700" rel="stylesheet"> 
   
   <!-- Icons -->
   
@@ -29,7 +28,99 @@
     gtag('config', 'UA-131554289-1');
   </script>
 </head>
+
 <body class="plum">
+  <header>
+    <div class="container"> 
+      <div class="logo">
+        <a aria-label="Return to homepage" href="{{ "/index" | relative_url }}">
+          <img class="logo--small" src="{{ "/img/logo/brm-logo-color-micro.svg" | relative_url }}" alt="Baltimore Rescue Mission Logo Small">
+          <img class="logo--large" src="{{ "/img/logo/brm-logo-color-min.svg" | relative_url }}" alt="Baltimore Rescue Mission Logo Large">
+        </a>
+      </div>
+      <div class="nav__wrapper">
+        <div class="nav__top">
+          <a class="btn  btn--small  header__donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=VH2TZCZFWRQYE&amp;source=url" target="_blank">Donate</a>
+        </div> 
+      
+        <div class="nav__lower">
+        
+          <button class="main-nav-btn" aria-haspopup="true" aria-expanded="false">
+            <svg id="main-nav-btn__icon" viewBox="0 0 448 512" style="fill: #732E4A" aria-label="Main Menu Icon">
+              <path id="bar-1" d="M16,132h416c8.8,0,16-7.2,16-16V76c0-8.8-7.2-16-16-16H16C7.2,60,0,67.2,0,76v40
+                C0,124.8,7.2,132,16,132z"></path>
+              <path id="bar-2" d="M16,292h416c8.8,0,16-7.2,16-16v-40c0-8.8-7.2-16-16-16H16c-8.8,0-16,7.2-16,16v40
+                C0,284.8,7.2,292,16,292z"></path>
+              <path id="bar-3" d="M16,292h416c8.8,0,16-7.2,16-16v-40c0-8.8-7.2-16-16-16H16c-8.8,0-16,7.2-16,16v40
+                C0,284.8,7.2,292,16,292z"></path>
+              <path id="bar-4" d="M16,452h416c8.8,0,16-7.2,16-16v-40c0-8.8-7.2-16-16-16H16c-8.8,0-16,7.2-16,16v40
+                C0,444.8,7.2,452,16,452z"></path>
+            </svg>
+          </button>
+
+          
+
+          <nav class="main-nav" aria-label="Main Navigation">
+            <ul>
+              <li><a href="{{ "/index" | relative_url }}" class="main-nav__item" {% if page.current == "index" %}aria-current="page"{% endif %}>Home</a></li>
+              <li class="nav-dropdown">
+                <a href="#" aria-haspopup="true" aria-expanded="false" class="main-nav__item">Ministries &#9660;</a>
+                <ul>
+                    <li><a href="{{ "ministries/mens-division" | relative_url }}" class="main-nav__item" {% if page.current == "mens-division" %}aria-current="page"{% endif %}>Men's Division</a></li>
+                    <li><a href="{{ "ministries/karis-home" | relative_url }}" class="main-nav__item" {% if page.current == "karis-home" %}aria-current="page"{% endif %}>Karis Home</a></li>
+                </ul>
+              </li>
+              <li class="nav-dropdown">
+                <a href="#" aria-haspopup="true" aria-expanded="false" class="main-nav__item">Mission &#9660;</a>
+                <ul>
+                    <li><a href="#" class="main-nav__item" >Purpose Statement</a></li>
+                    <li><a href="#" class="main-nav__item" >Statement of Faith</a></li>
+                    <li><a href="#" class="main-nav__item" >Philosophy and History</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="main-nav__item">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div> 
+      </div>
+    </div>
+  </header>    
   {{content}}
+  <footer class="grape  text--light  text--center">
+    <section class="container">
+      <a class="btn  btn--center  btn--light" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=VH2TZCZFWRQYE&amp;source=url" target="_blank">Donate</a>
+
+      <div class="row">
+        <article>
+              <p class="footer__text">Your generous gift to this ministry will enable us to provide for the spiritual, physical, and material needs of our guests, and is greatly appreciated.</p>
+        </article>
+      </div>
+
+      <div class="row">
+        <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1091.7177145166108!2d-76.60053092573939!3d39.29178832585502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c80486b1a84ee3%3A0x19d7c6b7a8d46216!2sBaltimore+Rescue+Mission!5e0!3m2!1sen!2sus!4v1560216789894!5m2!1sen!2sus" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      
+      <div class="row">
+        <article>
+          <p><strong>Men’s Division Location</strong><br>4 N Central Ave.<br>Baltimore, Maryland 21202-4622<br><a href="tel:4103422533">(410) 342-2533</a></p>
+        </article>
+        <article>
+          <p><strong>Mailing Address</strong><br>PO Box 735<br>Baltimore, Maryland 21203-0735</p>
+        </article>
+        <article>
+          <p><strong>Karis Home (Women &amp; Children)</strong><br>1228 E Baltimore St.<br>Baltimore, Maryland 21202-4622<br><a href="4103421323">(410) 342-1323</a></p>
+        </article>
+      </div>
+
+      <div class="row">
+        <p>© Copyright 2019 Baltimore Rescue Mission, Inc. All rights reserved.</p>
+      </div>
+    </section>
+  </footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+  {% include lib.min.js %}
+</script>
+<script type="text/javascript" src="https://av1611.com/verseclick/verseclick.js"></script>
 </html>
