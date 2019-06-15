@@ -24,6 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   since 1956. We are a Christian, non-profit, non-denominational Gospel ministry.
 baseurl: ""
 url: "https://baltimorerescuemission.org"
+google-site-verification: Ha01wLoLPwPMITLiGM5JFOtlOvfZ8SKyeC2AwY19nIM
 lang: en_US
 
 # Build settings
