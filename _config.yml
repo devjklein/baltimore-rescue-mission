@@ -23,7 +23,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   The Baltimore Rescue Mission has been reaching out to the poor of Baltimore 
   since 1956. We are a Christian, non-profit, non-denominational Gospel ministry.
 baseurl: ""
-url: "baltimorerescuemission.org"
+url: "https://baltimorerescuemission.org"
 lang: en_US
 
 # Build settings
@@ -31,7 +31,8 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-
+  - jekyll-seo-tag
+  - jekyll-sitemap
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
