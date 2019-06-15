@@ -145,12 +145,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.5rem;
-  padding: .75em 175px;
+  padding: .75em 0;
 }
 
 h2 {
   font-size: 2rem;
-  padding-top: 1em;
+  padding-top: 1.5em;
   /* text-decoration-line: underline; */
   /* text-decoration-color: #732E4A; */
   line-height: 1.25em;
@@ -170,16 +170,14 @@ h4 {
   line-height: 1.25em;
 }
 
-@media (max-width: 768px) {
-  h1 {
-    padding: .75em 0;
-  }
-}
-
 span, p, a, ul, ol, li, figcaption, button {
   font-weight: 400;
   font-size:   1rem;
   line-height: 1.5em;
+}
+
+article {
+  margin: 0 auto;
 }
 
 article p,
@@ -192,14 +190,22 @@ article table {
   margin: 1.5em auto 0 auto;
 }
 
-p>a {
+article ol li,
+article p {
+  margin-top: 1em;
+}
+
+p>a,
+ol a {
   text-decoration: underline;
   color: #502B3A;
 }
-p>a:hover {
+p>a:hover,
+ol a:hover {
   color: #934054;
 }
-p>a:active {
+p>a:active,
+ol a:active {
   background-color: #502B3A;
   color: #FFF;
 }
@@ -230,11 +236,11 @@ p>a:active {
 
 @font-face {
   font-family: 'icomoon';
-  src:  url({{ "/fonts/icomoon.eot?c2eje9" | relative_url }});
-  src:  url({{ "/fonts/icomoon.eot?c2eje9#iefix" | relative_url }}) format('embedded-opentype'),
-    url({{ "/fonts/icomoon.ttf?c2eje9" | relative_url }}) format('truetype'),
-    url({{ "/fonts/icomoon.woff?c2eje9" | relative_url }}) format('woff'),
-    url({{ "/fonts/icomoon.svg?c2eje9#icomoon" | relative_url }}) format('svg');
+  src:  url({{ "/fonts/icomoon.eot?yurca2" | relative_url }});
+  src:  url({{ "/fonts/icomoon.eot?yurca2#iefix" | relative_url }}) format('embedded-opentype'),
+    url({{ "/fonts/icomoon.ttf?yurca2" | relative_url }}) format('truetype'),
+    url({{ "/fonts/icomoon.woff?yurca2" | relative_url }}) format('woff'),
+    url({{ "/fonts/icomoon.svg?yurca2#icomoon" | relative_url }}) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -254,23 +260,14 @@ p>a:active {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-phone-square:before {
-  content: "\f098";
-}
-.icon-github:before {
-  content: "\f09b";
-}
-.icon-envelope:before {
-  content: "\f0e0";
-}
 .icon-youtube:before {
-  content: "\f167";
+  content: "\e900";
 }
-.icon-instagram:before {
-  content: "\f16d";
+.icon-mail:before {
+  content: "\ea83";
 }
-.icon-wheelchair-alt:before {
-  content: "\f29b";
+.icon-facebook2:before {
+  content: "\ea91";
 }
 
 
@@ -363,12 +360,18 @@ footer .container {
   box-shadow: none;
 }
 
-.footer__text {
-  max-width: 756px;
-  margin: 0 auto;
+.footer__list {
+  padding: 1rem;
 }
 
-
+.footer__social {
+  justify-content: center;
+  flex-direction: row!important;
+}
+  .footer__social-item {
+    margin-right: .25rem;
+    display: inline-block;
+  }
 
 
 
@@ -376,15 +379,21 @@ footer .container {
   ##CONTENT
 \*------------------------------------*/
 
+main {
+  flex: 1 0 auto; /* flex-basis must be explicitly set here for IE */
+  display: flex;
+  flex-direction: column; /* All items underneath will stack in a vertical column. This allows the entire document to lay out in a stack. */
+}
+
 .container {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   margin: 0;
-  padding: 0 .5em 2em .5em;
+  padding: 0 .5rem 2rem .5rem;
   
   max-width: 1200px; /* Full width */
   align-self: center; /* Alignment */
-  width: 100%; /* Resize to window width, up to max-width */
+  width: 95%; /* Resize to window width, up to max-width */
   
   display: flex; /* Items underneath will default to flex horizontally, in one row */
   flex: 1 0 auto; /* flex-basis must be explicitly set here for IE */
@@ -392,16 +401,15 @@ footer .container {
   justify-content: space-between;
 }
 
-main {
-  flex: 1 0 auto; /* flex-basis must be explicitly set here for IE */
-  display: flex;
-  flex-direction: column; /* All items underneath will stack in a vertical column. This allows the entire document to lay out in a stack. */
+.inline {
+  box-shadow: none;
 }
 
 .row {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -410,14 +418,10 @@ main {
   }
 }
 
-article {
-  flex: 1;
-  padding: 1rem;
-}
-
 .textbox {
-  max-width: 600px;
-  margin: 1.5em auto 0 auto;
+  max-width: 690px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -717,7 +721,7 @@ article {
   max-height: 450px;
   width: 100%;
   height: 450px;
-  margin: 0 auto;
+  margin: 1.5em auto 0 auto;
 }
 
 
@@ -730,7 +734,8 @@ article {
 
 .homepage-hero, .slide {
   min-height: auto;
-  max-height: calc(100vh - 260px);
+  max-height: 800px;
+  /* max-height: calc(100vh - 260px); */
   height: calc(54.25vw);
  }
 
@@ -740,24 +745,29 @@ article {
   flex: 1 0 auto;
  }
 
+ .homepage-hero--mini {
+  max-height: 400px;
+  display: flex;
+  max-width: 100%;
+ }
+
+.homepage-hero--mini > img {
+  flex-shrink: 0;
+  align-self: center;
+}
+
 .homepage-hero__caption {
   position: absolute;
   max-width: 640px;
   padding: .75rem 0;
   left: 50%;
-  top: 75%;
+  top: 80%;
   transform: translate(-50%, -50%);
   text-shadow: 0 0 12px #000,
   0 0 24px #000,
   0 0 24px #000,
   0 0 24px #000;
  }
-
-@media (min-width: 900px) {
-  .homepage-hero, .slide {
-    min-height: 500px;
-   }
-}
 
 @media screen and (max-width: 768px) {
   .homepage-hero, .slide {
@@ -788,8 +798,45 @@ article {
 
 
 /*------------------------------------*\
+  ##MINISTRY-TILE
+\*------------------------------------*/
+.homepage-ministry {
+  display: flex;
+  height: 100%;
+}
+
+.homepage-ministry__textbox {
+  padding: 0 1rem 1rem 1rem;
+  align-self: center;
+  margin: 0;
+  order: 1;
+}
+  .homepage-ministry__header {
+    padding: 0 0 1rem 0;
+  }
+
+.homepage-ministry__image {
+  overflow: hidden;
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .homepage-ministry__textbox {
+    order: 0;
+    flex: 1;
+  }
+  .homepage-ministry__image {
+    order: 0;
+    flex: 1;
+  }
+}
+
+
+
+/*------------------------------------*\
   ##SLIDESHOW
 \*------------------------------------*/
+
 .slideshow--mobile {
   display: block;
 }
@@ -805,10 +852,24 @@ article {
        -o-transition: opacity 2.5s;
           transition: opacity 2.5s;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.slide > img {
+  flex-shrink: 0;
 }
 
 .show {
   opacity: 1;
+}
+
+.slick-slideshow {
+  margin: 0 2rem;
+}
+.slick-slideshow p {
+  margin-top: 1rem;
 }
 
 
@@ -825,21 +886,27 @@ article {
 
 
 
+
+
 /*------------------------------------*\
-  ##NOTE
+  ##SOCIAL-ICONS
 \*------------------------------------*/
 
-.note {
-  margin: 2rem auto 0 auto;
+[class^="icon-"], [class*=" icon-"] {
+  font-size: 2.6667rem;
+  text-decoration: none;
+  color: #FFF;
   text-align: center;
-  padding: 0 1rem;
+  padding: .125em;
+  border-radius: 5px;
 }
-@media (min-width: 768px) {
-  .note {
-    width: 450px;
-    margin: 2rem auto 0 auto;
-    
-  }
+[class^="icon-"]:hover, [class*=" icon-"]:hover {
+  color: #502B3A;
+  background-color: #FFF;
+}
+[class^="icon-"]:active, [class*=" icon-"]:active {
+  color: #934054;
+  background-color: #FFF;
 }
 
 
@@ -853,7 +920,7 @@ article {
 	
   font-family: "Playfair Display", Garamond, serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 .vcPopupVerseText {
   background-color:#FFF2CB;

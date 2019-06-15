@@ -3,14 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>{{site.title}}</title>
+  <title>{{ page.title }} | {{site.title}}</title>
   
   <!-- Stylesheets -->
   <style>
     {% include normalize.min.css %}
     {% include styles.min.css %}
+    {% if page.current == "mens-division" or page.current == "karis-home" or page.current == "history"%}
+      {% include slick.css %}
+      {% include slick-theme.css %}
+    {% endif %}
   </style>
   
+  {% if page.current == "mens-division" or page.current == "karis-home" or page.current == "history" %}
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  {% endif %}
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700" rel="stylesheet"> 
@@ -73,12 +80,12 @@
               <li class="nav-dropdown">
                 <a href="#" aria-haspopup="true" aria-expanded="false" class="main-nav__item">Mission &#9660;</a>
                 <ul>
-                    <li><a href="#" class="main-nav__item" >Purpose Statement</a></li>
-                    <li><a href="#" class="main-nav__item" >Statement of Faith</a></li>
-                    <li><a href="#" class="main-nav__item" >Philosophy and History</a></li>
+                    <li><a href="{{ "mission/philosophy" | relative_url }}" class="main-nav__item" {% if page.current == "philosophy" %}aria-current="page"{% endif %}>Philosophy</a></li>
+                    <li><a href="{{ "mission/statement-of-faith" | relative_url }}" class="main-nav__item" {% if page.current == "statement-of-faith" %}aria-current="page"{% endif %}>Statement of Faith</a></li>
+                    <li><a href="{{ "mission/history" | relative_url }}" class="main-nav__item" {% if page.current == "history" %}aria-current="page"{% endif %}>History</a></li>
                 </ul>
               </li>
-              <li><a href="#" class="main-nav__item">Contact Us</a></li>
+              <li><a href="{{ "/contact" | relative_url }}" class="main-nav__item">Contact Us</a></li>
             </ul>
           </nav>
         </div> 
@@ -88,39 +95,100 @@
   {{content}}
   <footer class="grape  text--light  text--center">
     <section class="container">
-      <a class="btn  btn--center  btn--light" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=VH2TZCZFWRQYE&amp;source=url" target="_blank">Donate</a>
+      <div class="row">
+        <a class="btn  btn--center  btn--light" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=VH2TZCZFWRQYE&amp;source=url" target="_blank">Donate</a>
+      </div>
 
       <div class="row">
-        <article>
+          <div class="textbox">
               <p class="footer__text">Your generous gift to this ministry will enable us to provide for the spiritual, physical, and material needs of our guests, and is greatly appreciated.</p>
-        </article>
+          </div>
       </div>
 
       <div class="row">
         <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1091.7177145166108!2d-76.60053092573939!3d39.29178832585502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c80486b1a84ee3%3A0x19d7c6b7a8d46216!2sBaltimore+Rescue+Mission!5e0!3m2!1sen!2sus!4v1560216789894!5m2!1sen!2sus" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
       
-      <div class="row">
-        <article>
+      <ul class="row">
+        <li class="textbox  footer__list">
           <p><strong>Men’s Division Location</strong><br>4 N Central Ave.<br>Baltimore, Maryland 21202-4622<br><a href="tel:4103422533">(410) 342-2533</a></p>
-        </article>
-        <article>
+        </li>
+
+        <li class="textbox  footer__list">
           <p><strong>Mailing Address</strong><br>PO Box 735<br>Baltimore, Maryland 21203-0735</p>
-        </article>
-        <article>
+        </li>
+
+        <li class="textbox  footer__list">
           <p><strong>Karis Home (Women &amp; Children)</strong><br>1228 E Baltimore St.<br>Baltimore, Maryland 21202-4622<br><a href="4103421323">(410) 342-1323</a></p>
-        </article>
-      </div>
+        </li>
+      </ul>
+
+      <ul class="row  footer__social">
+          <li class="footer__social-item"><a aria-label="Email Baltimore Rescue Mission" href="mailto:baltimorerescuemission@gmail.com" class="icon-mail"></a></li>
+
+          <li class="footer__social-item"><a aria-label="Visit Baltimore Rescue Mission on YouTube" href="{{ "/contact#youtube" | relative_url }}" target="_blank"  class="icon-youtube"></a></li>
+          
+          <li class="footer__social-item"><a aria-label="Find Baltimore Rescue Mission on Facebook" href="https://www.facebook.com/baltimorerescuemission/" target="_blank"  class="icon-facebook2"></a></li>
+        </ul>
 
       <div class="row">
-        <p>© Copyright 2019 Baltimore Rescue Mission, Inc. All rights reserved.</p>
+        <div class="textbox">
+          <p>© Copyright 2019 Baltimore Rescue Mission, Inc. All rights reserved.</p>
+        </div>
       </div>
     </section>
   </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
-  {% include lib.min.js %}
-</script>
 <script type="text/javascript" src="https://av1611.com/verseclick/verseclick.js"></script>
+
+{% if page.current == "mens-division" or page.current == "karis-home"  or page.current == "history"%}
+<script>{% include slick.min.js %}</script>
+{% endif %}
+
+{% if page.current == "mens-division" or page.current == "karis-home" %}
+<script>
+$(document).ready(function(){
+  $('.slick-slideshow').slick({
+		accessible: true,
+		lazyLoad: 'ondemand',
+		dots: true,
+		adaptiveHeight: true,
+		slidesToShow: 1
+  });
+});
+</script>
+{% endif %}
+
+{% if page.current == "history" %}
+<script>
+$(document).ready(function(){
+  $('.slick-slideshow').slick({
+		accessible: true,
+		lazyLoad: 'ondemand',
+		dots: true,
+		adaptiveHeight: true,
+		slidesToShow: 3,
+		responsive: [
+			{
+				breakpoint: 960,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 756,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+  });
+});
+</script>
+{% endif %}
+
+<script>{% include lib.min.js %}</script>
 </html>
