@@ -33,7 +33,7 @@ permalink: mission/history
         </div>
         <div>
           <img src="{{ "/img/history/02.jpg" | relative_url }}" alt="The Baltimore Rescue Mission building, circa 1963">
-          <p>In 1956, the Baltimore Rescue Mission began at 909 Pennsylvania Ave.  The gospel was preached to over 50 men each night for six years.</p>
+          <p>After six years at 909 Pennsylvania Ave., the Lord opened the doors for the mission to move to Green Street from 1963-1974.</p>
         </div>
 
         <div>
