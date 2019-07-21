@@ -21,7 +21,7 @@ permalink: contact
           <p>PO Box 735<br>Baltimore, Maryland 21203-0735</p>
           <h2>Karis Home</h2>
           <p>To contact the <strong>Karis Home for Women and Children</strong>, please call or visit:</p>
-          <p>1228 E Baltimore St.<br>Baltimore, Maryland 21202-4622<br><a href="4103421323">(410) 342-1323</a></p>
+          <p>1228 E Baltimore St.<br>Baltimore, Maryland 21202-4622<br><a href="tel:4103421323">(410) 342-1323</a></p>
           <h2>Email</h2>
           <p>Please feel free to email us anytime at <a aria-label="Email Baltimore Rescue Mission" href="mailto:baltimorerescuemission@gmail.com">baltimorerescuemission@gmail.com</a></p>
           <h2>Facebook</h2>

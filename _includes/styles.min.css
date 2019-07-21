@@ -178,6 +178,7 @@ span, p, a, ul, ol, li, figcaption, button {
 
 article {
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 article p,
