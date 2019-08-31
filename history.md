@@ -56,7 +56,7 @@ permalink: mission/history
 
         <div>
           <img src="{{ "/img/history/06.jpg" | relative_url }}" alt="Raleigh and Pat Holt">
-          <p>Raleigh and Pat Holt.</p>
+          <p>Raleigh and Pat Holt</p>
         </div>
 
         <div>
@@ -70,13 +70,18 @@ permalink: mission/history
         </div>
 
         <div>
-          <img src="{{ "/img/history/09.jpg" | relative_url }}" alt="The Karis home building, prior to renovation">
+          <img src="{{ "/img/headers/karis-home.jpg" | relative_url }}" alt="The Karis home building, prior to renovation">
           <p>The completed Karis Home, "Grace Home", for women and children.</p>
         </div>
 
         <div>
           <img src="{{ "/img/history/10.jpg" | relative_url }}" alt="Pastor Chuck and Janna Buettner">
-          <p>Pastor Chuck and Janna Buettner.</p>
+          <p>Pastor Chuck and Janna Buettner</p>
+        </div>
+
+        <div>
+          <img src="{{ "/img/slideshow/homepage-hero-02.jpg" | relative_url }}" alt="Pastor Chuck and Janna Buettner">
+          <p>The Baltimore Rescue Mission and Karis Home</p>
         </div>
       </div>
     </section>
