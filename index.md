@@ -27,6 +27,11 @@ current: index
   </section>
 
   <section class="container  white">
+    <h2 class="heading--highlight">New Media!</h2>
+    <div class="video-responsive" id="video">
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/qr4Ye6Oh8XA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
     <h2>Who are we?</h2>
     <div class="row  text--center">
           <div class="textbox">

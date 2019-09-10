@@ -25,9 +25,9 @@ permalink: contact
           <h2>Email</h2>
           <p>Please feel free to email us anytime at <a aria-label="Email Baltimore Rescue Mission" href="mailto:baltimorerescuemission@gmail.com">baltimorerescuemission@gmail.com</a></p>
           <h2>Facebook</h2>
-          <p><a aria-label="Find Baltimore Rescue Mission on Facebook" href="https://www.facebook.com/baltimorerescuemission/">Find us on facebook! </a></p>
+          <p><a aria-label="Find Baltimore Rescue Mission on Facebook" href="https://www.facebook.com/baltimorerescuemission/" target="_blank">Find us on facebook</a></p>
           <h2 id="youtube">YouTube</h2>
-          <p>YouTube channel coming soon.</p>
+          <p><a aria-label="Find Baltimore Rescue Mission on Facebook" href="https://www.youtube.com/channel/UCw6ieoEP2b6a2AgWZeMU9cg" target="_blank">View our media on YouTube</a></p>
         </article>
       </div>
   </section>
