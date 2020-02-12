@@ -543,6 +543,7 @@ main {
   top: 67px;
   position: absolute;
   left: 0;
+  z-index: 1;
 }
 
 .main-nav [aria-current=page] {
